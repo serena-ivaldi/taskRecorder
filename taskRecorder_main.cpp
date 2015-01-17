@@ -1,4 +1,8 @@
 /* 
+ * Copyright (C) 2015 CODYCO Project
+ * Author: Serena Ivaldi <serena.ivaldi@inria.fr>
+ * website: www.codyco.eu
+ *
  * Copyright (C) 2012 MACSi Project
  * Author: Serena Ivaldi
  * email:  serena.ivaldi@isir.upmc.fr
@@ -17,10 +21,10 @@
 #include <yarp/sig/all.h>
 #include <yarp/dev/all.h>
 //
-#include <gtk/gtk.h>
+//#include <gtk/gtk.h>
 //
-#include <macsi/modHelp/modHelp.h>
-#include <macsi/objects/objects.h>
+//#include <macsi/modHelp/modHelp.h>
+//#include <macsi/objects/objects.h>
 //
 #include <string>
 #include <iostream>
@@ -33,8 +37,8 @@ YARP_DECLARE_DEVICES(icubmod)
 using namespace yarp::os;
 using namespace yarp::sig;
 using namespace yarp::dev;
-using namespace macsi::modHelp;
-using namespace macsi::objects;
+//using namespace macsi::modHelp;
+//using namespace macsi::objects;
 using namespace std;
 
 
@@ -42,6 +46,56 @@ using namespace std;
 #define STATUS_IDLE         0
 #define STATUS_RECORDING    1
 #define VALIDATION_REQUIRED 2
+
+
+
+//==> from modHelp
+
+#define displayValue(V) cout<<" "<< #V <<" : "<<V<<endl;
+#define displayNameValue(S,V) cout<<" "<< S <<" : "<<V<<endl;
+#define displayVector(V) cout<<" "<< #V <<" : "<<V.toString()<<endl;
+#define displayNameVector(S,V) cout<<" "<< S <<" : "<<V.toString()<<endl;
+
+ void readString(ResourceFinder &rf, string name, string &v, string vdefault)
+{
+if(rf.check(name.c_str()))
+{
+v = rf.find(name.c_str()).asString();
+}
+else
+{
+v = vdefault;
+cout<<"Could not find value for "<<name<<". "
+<<"Setting default "<<vdefault<<endl;
+}
+displayNameValue(name,v);
+}
+
+
+void readInt(ResourceFinder &rf, string name, int &v, int vdefault)
+{
+if(rf.check(name.c_str()))
+{
+v = rf.find(name.c_str()).asInt();
+}
+else
+{
+v = vdefault;
+cout<<"Could not find value for "<<name<<". "
+<<"Setting default "<<vdefault<<endl;
+}
+displayNameValue(name,v);
+}
+
+
+
+
+//==>end
+
+
+
+
+
 
 // the status of the process: recording or idle
 int status;
@@ -96,12 +150,12 @@ public:
         Time::turboBoost();
         count=0;
 
-        pathFiles=finder.getContextPath();
+        pathFiles=finder.getHomeContextPath();
         cout<<"Writing to path = "<<pathFiles<<endl;
 
         readString(finder,"file",fileName,"recordTask.txt");
         readString(finder,"robot",robotName,"icubSim");
-        readInt(finder,"rate",rate,20);
+        readInt(finder,"rate",rate,10);
         readString(finder,"name",moduleName,"recordArms");
 
 
@@ -218,9 +272,9 @@ int main(int argc, char * argv[])
     ResourceFinder finder;
     //retrieve information for the list of parts
     finder.setVerbose(true);
-    finder.setContext("taskRecorder");
+    finder.setDefaultContext("taskRecorder");
     finder.setDefaultConfigFile("taskRecorder.ini");
-    finder.configure("MACSI_ROOT",argc,argv);
+    finder.configure(argc,argv);
 
     if (finder.check("help"))
     {
