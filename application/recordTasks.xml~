@@ -1,0 +1,29 @@
+<application>
+<name>Recording tasks with arms</name>
+<dependencies>
+	<port>/icub/right_arm/state:o</port>
+	<port>/wholeBodyDynamics/right_arm/Torques:o</port>
+</dependencies>
+
+<module>
+    <name>taskRecorderGUI</name>
+    <parameters> </parameters>
+    <node>macsi03</node>
+    <tag>task_recording_GUI</tag>
+</module>
+
+<module>
+    <name>taskRecorder</name>
+    <parameters> </parameters>
+    <node>macsi03</node>
+    <tag>grasps_recording</tag>
+</module>
+
+<connection>
+        <from>/recordArmsTUD/gui:o</from>
+        <to>/recordArmsTUD/rpc</to>
+        <protocol>tcp</protocol>
+</connection>
+
+</application>
+

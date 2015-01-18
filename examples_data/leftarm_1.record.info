@@ -1,0 +1,103 @@
+actualTime
+Rigth Arm
+cur_x_RA[0]
+cur_x_RA[1]
+cur_x_RA[2]
+cur_o_RA[0]
+cur_o_RA[1]
+cur_o_RA[2]
+cur_o_RA[3]
+cur_q_RA[i]  i=0
+cur_q_RA[i]  i=1
+cur_q_RA[i]  i=2
+cur_q_RA[i]  i=3
+cur_q_RA[i]  i=4
+cur_q_RA[i]  i=5
+cur_q_RA[i]  i=6
+cur_q_RA[i]  i=7
+cur_q_RA[i]  i=8
+cur_q_RA[i]  i=9
+cur_q_RA[i]  i=10
+cur_q_RA[i]  i=11
+cur_q_RA[i]  i=12
+cur_q_RA[i]  i=13
+cur_q_RA[i]  i=14
+cur_q_RA[i]  i=15
+cur_xd_RA[0]
+cur_xd_RA[1]
+cur_xd_RA[2]
+cur_od_RA[0]
+cur_od_RA[1]
+cur_od_RA[2]
+cur_od_RA[3]
+cur_qd_RA[i]  i=0
+cur_qd_RA[i]  i=1
+cur_qd_RA[i]  i=2
+cur_qd_RA[i]  i=3
+cur_qd_RA[i]  i=4
+cur_qd_RA[i]  i=5
+cur_qd_RA[i]  i=6
+cur_qd_RA[i]  i=7
+cur_qd_RA[i]  i=8
+cur_qd_RA[i]  i=9
+cur_qd_RA[i]  i=10
+cur_qd_RA[i]  i=11
+cur_qd_RA[i]  i=12
+cur_qd_RA[i]  i=13
+cur_qd_RA[i]  i=14
+cur_qd_RA[i]  i=15
+Left Arm
+cur_x_LA[0]
+cur_x_LA[1]
+cur_x_LA[2]
+cur_o_LA[0]
+cur_o_LA[1]
+cur_o_LA[2]
+cur_o_LA[3]
+cur_q_LA[i]  i=0
+cur_q_LA[i]  i=1
+cur_q_LA[i]  i=2
+cur_q_LA[i]  i=3
+cur_q_LA[i]  i=4
+cur_q_LA[i]  i=5
+cur_q_LA[i]  i=6
+cur_q_LA[i]  i=7
+cur_q_LA[i]  i=8
+cur_q_LA[i]  i=9
+cur_q_LA[i]  i=10
+cur_q_LA[i]  i=11
+cur_q_LA[i]  i=12
+cur_q_LA[i]  i=13
+cur_q_LA[i]  i=14
+cur_q_LA[i]  i=15
+cur_xd_LA[0]
+cur_xd_LA[1]
+cur_xd_LA[2]
+cur_od_LA[0]
+cur_od_LA[1]
+cur_od_LA[2]
+cur_od_LA[3]
+cur_qd_LA[i]  i=0
+cur_qd_LA[i]  i=1
+cur_qd_LA[i]  i=2
+cur_qd_LA[i]  i=3
+cur_qd_LA[i]  i=4
+cur_qd_LA[i]  i=5
+cur_qd_LA[i]  i=6
+cur_qd_LA[i]  i=7
+cur_qd_LA[i]  i=8
+cur_qd_LA[i]  i=9
+cur_qd_LA[i]  i=10
+cur_qd_LA[i]  i=11
+cur_qd_LA[i]  i=12
+cur_qd_LA[i]  i=13
+cur_qd_LA[i]  i=14
+cur_qd_LA[i]  i=15
+Torso
+cur_q_TO[i]  i=0
+cur_q_TO[i]  i=1
+cur_q_TO[i]  i=2
+cur_qd_TO[i]  i=0
+cur_qd_TO[i]  i=1
+cur_qd_TO[i]  i=2
+
